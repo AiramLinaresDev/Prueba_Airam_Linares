@@ -1,0 +1,145 @@
+---
+
+---
+
+<section>
+    <div id="joinUs">
+        <h5>Join Us</h5>
+        <h1>25K+ STUDENTS TRUST US</h1>
+        <h4>Every day brings with it fresh set of learnings possibilities</h4>
+        <div>
+            <button class="join">Join Us</button>
+            <button class="learn">Learn More</button>
+        </div>
+    </div>
+    <div id="images">
+        <img class=" Lady" src="/src/img/Lady.png" alt="Lady">
+        <img class=" Statistic" src="/src/img/Statistic.png" alt="Statistic">
+        <img class=" Statistics2019" src="/src/img/Statistics2019.png" alt="Statistics2019">
+        <img class=" BigBallOrange" src="/src/svg/BigBallOrange.svg" alt="BigBallOrange">
+        <img class=" CurveLines" src="/src/svg/CurveLines.svg" alt="BigBallOrange">
+        <img class=" Lab" src="/src/svg/Lab.svg" alt="BigBallOrange">
+        <img class=" SmallBallOrange" src="/src/svg/SmallBallOrange.svg" alt="BigBallOrange">
+    </div>
+
+</section>
+
+<style>
+    h1 {
+        font-size: 3rem;
+        font-weight: bold;
+        color: white;
+        margin-top: -2%;
+        margin-bottom: -2%;
+    }
+
+    h4 {
+        font-weight: 400;
+        color: white;
+    }
+
+    section {
+        margin: 1% 0 10% 0;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px;
+        width: 100%;
+
+        @media screen and (max-width: 1220px) {
+            flex-direction: column;
+            
+        }
+    }
+
+    #joinUs {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 20px;
+        max-width: 600px; /* Limitar el ancho máximo */
+    }
+
+    #images {
+        position: relative;
+        width: 100%;
+        max-width: 600px; /* Limitar el ancho máximo */
+        aspect-ratio: 1; /* Mantener una relación de aspecto */
+        box-sizing: border-box; /* Incluir padding y border en el cálculo del ancho total */
+    }
+
+    /* Ajustar las imágenes para que se posicionen correctamente */
+    #images img {
+        position: absolute;
+        max-width: 100%;
+        max-height: 100%;
+    }
+
+    .Lady {
+        top: 10%;
+        left: 50%;
+        transform: translate(-40%, -10%);
+        z-index: 5;
+    }
+
+    .Statistic {
+        bottom: -10%;
+        right: 0;
+        z-index: 6;
+    }
+
+    .Statistics2019 {
+        top: 0;
+        left: 0;
+        z-index: 4;
+    }
+
+    .BigBallOrange {
+        top: 55%;
+        right: 15%;
+        transform: translateY(-50%);
+        z-index: 1;
+    }
+
+    .CurveLines {
+        top: 50%;
+        right: 10%;
+        z-index: 2;
+    }
+
+    .Lab {
+        bottom: 10%;
+        left: 10%;
+        z-index: 3;
+    }
+
+    .SmallBallOrange {
+        bottom: 40%;
+        left: 10%;
+        z-index: 7;
+    }
+
+    /* Estilos para los botones */
+    button {
+        margin: 5px;
+    }
+
+    .join {
+        color: white;
+        background-color: #8D5CF6;
+        padding: 10px 20px;
+        border-radius: 5px;
+        font-size: 16px;
+        border: none;
+    }
+
+    .learn {
+        color: white;
+        background-color: transparent;
+        padding: 10px 20px;
+        border-radius: 5px;
+        border: 1px solid #8D5CF6;
+        font-size: 16px;
+    }
+</style>

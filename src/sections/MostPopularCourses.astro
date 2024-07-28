@@ -1,0 +1,51 @@
+---
+import CourseCard from '../components/CourseCard.astro'
+---
+
+<section>
+    <div class="advice">
+        <h6>Practice Advice</h6>
+        <h2>Most Popular Courses</h2>
+        <p>Problems trying to resolve the conflict between the two major realms of Classical physics: Newtonian mechanics </p>
+    </div>
+    <div class="courses">
+        <CourseCard
+            title="Expert instruction"
+            description="The gradual accumulation and small-scale.."
+            image="/src/svg/School.svg"
+        />
+        <CourseCard
+            title="2,769 online courses"
+            description="The gradual accumulation and small-scale.."
+            image="/src/svg/Brain.svg"
+        />
+    </div>
+
+</section>
+
+<style>
+    section {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+    }
+    .advice {
+        margin: 0 30% 5% 30%;
+        text-align: center;
+
+        h6{
+            color: #8D5CF6;
+        }
+        h2 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin: -2% 0 -2% 0;
+        }
+    }
+
+    .courses {
+        display: flex;
+        justify-content: center;
+        flex-direction: row;
+    }
+</style>

@@ -1,0 +1,85 @@
+---
+import ApprodableCard from '../components/ApprodableCard.astro'
+import AppdableCard from '../components/ApprodableCard.astro'
+---
+
+<section>
+    <div class="advice">
+        <h6>Practice Advice</h6>
+        <h2>Approdable Packages</h2>
+        <p>Problems trying to resolve the conflict between 
+            the two major realms of Classical physics: Newtonian mechanics </p>
+    </div>
+    <div class="slider">
+        <div class="slider-inner">
+            <ApprodableCard
+                title="Training Courses" 
+                description="We focus on ergonomics and meeting you where you work. It's only a keystroke away."
+                image="/src/img/product-cover-1.png"
+                sales={15}
+                price={16.48}
+                salePrice={6.48}
+                rate={4.9}
+            />
+            <AppdableCard
+                title="LifeTime Access"
+                description="We focus on ergonomics and meeting you where you work. It's only a keystroke away."
+                image="/src/img/product-cover-2.png"
+                sales={15}
+                price={16.48}
+                salePrice={6.48}
+                rate={4.9}
+            />
+            <ApprodableCard
+                title="Training Courses"
+                description="We focus on ergonomics and meeting you where you work. It's only a keystroke away."
+                image="/src/img/product-cover-1.png"
+                sales={15}
+                price={16.48}
+                salePrice={6.48}
+                rate={4.9}
+            />
+        </div>
+    </div>
+
+</section>
+
+<style>
+    section {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        width: 100%;
+    }
+    .advice {
+        margin: 0 30% 5% 30%;
+        text-align: center;
+
+        h6{
+            color: #8D5CF6;
+        }
+        h2 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin: -2% 0 -2% 0;
+        }
+    }
+
+    .courses {
+        display: flex;
+        justify-content: center;
+        flex-direction: row;
+    }
+
+    .slider {
+        overflow: hidden;
+        width: 60%;
+    }
+
+    .slider-inner {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+    }
+</style>

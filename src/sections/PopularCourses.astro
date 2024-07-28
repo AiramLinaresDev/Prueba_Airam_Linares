@@ -1,0 +1,133 @@
+---
+
+---
+
+<section>
+    <div id="images">
+        <img class="Lady" src="/src/img/Lady2.png" alt="Lady">
+        <img class="Graphic" src="/src/img/Graphic.png" alt="Graphic">
+        <img class="Scores" src="/src/img/Scores.png" alt="Scores">
+        <img class="Triangle" src="/src/svg/Triangle.svg" alt="Triangle">
+        <img class="Hands" src="/src/svg/Hands.svg" alt="Triangle">
+        <img class="Okey" src="/src/svg/Okey.svg" alt="Triangle">
+        <img class="Emoji" src="/src/svg/Emoji.svg" alt="Triangle">
+    </div>
+
+    <div class="info">
+        <div class="separator"></div>
+        <h2>Our Popular Courses</h2>
+        <p>Problems trying to resolve the conflict between 
+            the two major realms of Classical physics: 
+            Newtonian mechanics </p>
+
+        <div class="learn">
+            <a href="#">Learn More</a>
+            <img src="/src/svg/arrow-next.svg" alt="->">
+        </div>
+    </div>
+</section>
+
+<style>
+    section {
+        display: flex;
+        justify-content: center;
+        flex-direction: row;
+        justify-content: end;
+        align-items: center;
+        margin: 25% 10%;
+    }
+
+    .info {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        width: 50%;
+        margin-left: 10%;
+
+        .separator {
+            width: 30%;
+            border: none;
+            border-top: 7px solid #E74040;
+            float: left;
+        }
+
+        h2 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin: 5% 0 2% 0 ;
+        }
+
+        p {
+            font-size: 1rem;
+            margin: 10% 0;
+        }
+    }
+
+    .learn {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+
+        a {
+            text-decoration: none;
+            color: #8D5CF6;
+            font-size: 14px;
+        }
+    }
+
+    #images {
+        position: relative;
+        width: 100%;
+        max-width: 600px;
+        aspect-ratio: 1;
+        box-sizing: border-box;
+    }
+
+    #images img {
+        position: absolute;
+        max-width: 100%;
+        max-height: 100%;
+    }
+
+    .Lady {
+        top: 0;
+        left: 0;
+        z-index: 5;
+    }
+
+    .Graphic {
+        bottom: 45%;
+        right: 26%;
+        z-index: 6;
+    }
+
+    .Scores {
+        bottom: 0;
+        left: 0;
+        z-index: 6;
+    }
+
+    .Triangle {
+        top: 20%;
+        right: 20%;
+        z-index: 1;
+    }
+
+    .Hands {
+        top: 62%;
+        right: 25%;
+        z-index:6;
+    }
+
+    .Emoji {
+        top: 25%;
+        right: 25%;
+        z-index: 6;
+    }
+
+    .Okey {
+        bottom: 40%;
+        left: 10%;
+        z-index: 7;
+    }
+</style>
