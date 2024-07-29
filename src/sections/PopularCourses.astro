@@ -29,12 +29,19 @@
 
 <style>
     section {
+        margin: 0 0 25% 0;
         display: flex;
-        justify-content: center;
         flex-direction: row;
-        justify-content: end;
+        justify-content: space-around;
         align-items: center;
-        margin: 25% 10%;
+        padding: 20px;
+        width: 100%;
+
+        @media screen and (max-width: 1220px) {
+            flex-direction: column;
+            row-gap: 20px;
+            
+        }
     }
 
     .info {
@@ -54,12 +61,12 @@
         h2 {
             font-size: 2.5rem;
             font-weight: 700;
-            margin: 5% 0 2% 0 ;
+            margin: 2% 0 0 0 ;
         }
 
         p {
             font-size: 1rem;
-            margin: 10% 0;
+            margin: 5% 0;
         }
     }
 
@@ -78,45 +85,47 @@
     #images {
         position: relative;
         width: 100%;
-        max-width: 600px;
-        aspect-ratio: 1;
+        max-width: 600px; 
+        aspect-ratio: 1; 
         box-sizing: border-box;
-    }
 
-    #images img {
-        position: absolute;
-        max-width: 100%;
-        max-height: 100%;
+        img {
+            position: absolute;
+            max-width: 100%;
+            max-height: 100%;
+        }
     }
 
     .Lady {
-        top: 0;
-        left: 0;
-        z-index: 5;
+        top: 10%;
+        left: 40%;
+        transform: translate(-40%, -10%);
+        z-index: 2;
     }
 
     .Graphic {
         bottom: 45%;
         right: 26%;
-        z-index: 6;
+        z-index: 8;
     }
 
     .Scores {
         bottom: 0;
         left: 0;
-        z-index: 6;
+        z-index: 4;
     }
 
     .Triangle {
-        top: 20%;
+        top: 50%;
         right: 20%;
+        transform: translateY(-50%);
         z-index: 1;
     }
 
     .Hands {
         top: 62%;
         right: 25%;
-        z-index:6;
+        z-index:5;
     }
 
     .Emoji {

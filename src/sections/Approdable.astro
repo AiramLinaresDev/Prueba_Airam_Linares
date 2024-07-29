@@ -49,44 +49,52 @@ import ApprodableCard from '../components/ApprodableCard.astro'
         align-items: center;
         flex-direction: column;
         width: 100%;
+        margin: 0 0 25% 0;
     }
+
     .advice {
         margin: 0 30% 5% 30%;
         text-align: center;
+
+        h6 {
+            color: #8D5CF6;
+        }
+
+        h2 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin: -2% 0 -2% 0;
+        }
     }
-    .advice h6 {
-        color: #8D5CF6;
-    }
-    .advice h2 {
-        font-size: 2.5rem;
-        font-weight: 700;
-        margin: -2% 0 -2% 0;
-    }
+
     .slider {
         overflow: hidden;
         width: 60%;
         position: relative;
     }
+
     .slider-inner {
         display: flex;
+        gap: 1.5rem;
         transition: transform 0.5s ease-in-out;
-    }
-    .slider-inner > * {
-        flex: 0 0 50%;
-        box-sizing: border-box;
-        padding: 10px;
     }
 </style>
 <script>
 
-    let sliderInner = document.querySelector('.slider-inner');
-    let index = 1;
+    let sliderInner = document.querySelector('.slider-inner') as HTMLElement;
+    let index = 0;
+    let percentage = index * -50;
+    if (sliderInner) {
+        sliderInner.style.transform = `translateX(${percentage}%)`;
+    }
 
     setInterval(() => {
         let percentage = index * -50;
-        sliderInner.style.transform = `translateX(${percentage}%)`;
+        if (sliderInner) {
+            sliderInner.style.transform = `translateX(${percentage}%)`;
+        }
         index++;
-        if (index === 2) {
+        if (index == 2) {
             index = 0;
         }
         

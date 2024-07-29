@@ -1,12 +1,16 @@
 ---
 import Layout from '@/layouts/Layout.astro';
-import Card from '@/components/Card.astro';
+import Card from '@/components/FaqCard.astro';
 import NavBar from "@/components/NavBar.astro"
 import Landing from '@/sections/Landing.astro';
 import MostPopularCourses from '@/sections/MostPopularCourses.astro';
 import PopularCourses from '@/sections/PopularCourses.astro';
 import Approdable from '@/sections/Approdable.astro';
 import Reviews from '@/sections/Reviews.astro';
+import Faq from '@/sections/Faq.astro';
+import Newsletter from '@/sections/Newsletter.astro';
+import Footer from '@/sections/Footer.astro';
+import Rights from '@/components/Rights.astro';
 ---
 
 <Layout title="Prueba Airam Linares.">
@@ -23,8 +27,12 @@ import Reviews from '@/sections/Reviews.astro';
 		<PopularCourses />
 		<Approdable />
 		<Reviews />
+		<Faq />
+		<Newsletter />
 	</main>
 	<footer>
+		<Footer />
+		<Rights />
 	</footer>
 </Layout>
 
@@ -35,6 +43,7 @@ import Reviews from '@/sections/Reviews.astro';
 		color: white;
 		font-size: 20px;
 		line-height: 1.6;
+		min-width: 800px;
 	}
 
 	header {
@@ -42,6 +51,11 @@ import Reviews from '@/sections/Reviews.astro';
 		width: 95%;
 		z-index: 1;
 		max-height: 95%;
+		min-width: 800px;
+	}
+
+	footer {
+		min-width: 900px;
 	}
 
 	#background {

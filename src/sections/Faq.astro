@@ -1,0 +1,95 @@
+---
+import FaqCard from '@/components/FaqCard.astro';
+---
+
+<section>
+    <div class="infoFaq">
+        <h2>FAQ</h2>
+        <p>Problems trying to resolve the conflict between 
+            the two major realms of Classical physics: Newtonian mechanics </p>
+    </div>
+
+    <div class="cards">
+        <FaqCard
+            title="The quick fox jumps over the lazy dog"
+            body="Things on a very small scale behave like nothing "
+            href="#"
+        />
+        <FaqCard
+            title="The quick fox jumps over the lazy dog"
+            body="Things on a very small scale behave like nothing "
+            href="#"
+        />
+        <FaqCard
+            title="The quick fox jumps over the lazy dog"
+            body="Things on a very small scale behave like nothing "
+            href="#"
+        />
+        <FaqCard
+            title="The quick fox jumps over the lazy dog"
+            body="Things on a very small scale behave like nothing "
+            href="#"
+        />
+        <FaqCard
+            title="The quick fox jumps over the lazy dog"
+            body="Things on a very small scale behave like nothing "
+            href="#"
+        />
+        <FaqCard
+            title="The quick fox jumps over the lazy dog"
+            body="Things on a very small scale behave like nothing "
+            href="#"
+        />
+        <FaqCard
+            title="The quick fox jumps over the lazy dog"
+            body="Things on a very small scale behave like nothing "
+            href="#"
+        />
+        <FaqCard
+            title="The quick fox jumps over the lazy dog"
+            body="Things on a very small scale behave like nothing "
+            href="#"
+        />
+        <FaqCard
+            title="The quick fox jumps over the lazy dog"
+            body="Things on a very small scale behave like nothing "
+            href="#"
+        />
+        
+    </div>
+</section>
+
+<style>
+    section {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 25% 10%;
+    }
+
+    .infoFaq {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 10%;
+        width: 60%;
+
+        h2 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        p {
+            text-align: center;
+        }
+    }
+
+    .cards {
+        display: grid;
+        grid-template-columns: auto auto auto;
+        justify-content: center;
+        gap: 20px;
+    }
+</style>

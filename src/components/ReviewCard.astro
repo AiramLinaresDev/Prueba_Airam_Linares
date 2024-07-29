@@ -10,7 +10,7 @@ const { image, description, PosterName, PosterJob } = Astro.props;
 ---
 
 <div class="review-card">
-    <img src={image} alt="nada" />
+    <img id="avatar" src={image} alt="nada" />
     <p>{description}</p>
     <img id="stars" src="/src/svg/stars.svg" alt="">
     <h5>{PosterName}</h5>
@@ -24,7 +24,6 @@ const { image, description, PosterName, PosterJob } = Astro.props;
         justify-content: center;
         align-items: center;
         background-color: #fff;
-        margin: 1rem;
         padding: 1rem;
         flex: 0 0 45%;
     }
@@ -33,7 +32,7 @@ const { image, description, PosterName, PosterJob } = Astro.props;
         height: 50%;
     }
 
-    img {
+    #avatar {
         width: 30%;
         height: 30%;
         border-radius: 50%;

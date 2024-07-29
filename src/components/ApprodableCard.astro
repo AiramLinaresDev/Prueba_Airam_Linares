@@ -14,12 +14,14 @@ const { title, description, image, sales, price, salePrice, rate } = Astro.props
 
 <div class="approdable-card">
     <label class="badge" for="sale">Sale</label>
-    <div class="buttons">
-        <button class="round"><img src="/src/svg/Like.svg" alt=""></button>
-        <button class="round"><img src="/src/svg/Cart.svg" alt=""></button>
-        <button class="round"><img src="/src/svg/Favorite.svg" alt=""></button>
+    <div id="topCarp">
+        <div class="buttons">
+            <button class="round"><img src="/src/svg/Like.svg" alt=""></button>
+            <button class="round"><img src="/src/svg/Cart.svg" alt=""></button>
+            <button class="round"><img src="/src/svg/Favorite.svg" alt=""></button>
+        </div>
+        <img id="principalImage" src={image} alt={title} />
     </div>
-    <img id="principalImage" src={image} alt={title} />
     <div id="topInfoCard">
         <h5 id="welcome">Welcome</h5>
         <p class="rate"><img src="/src/svg/Star.svg" alt=""> {rate}</p>
@@ -32,7 +34,7 @@ const { title, description, image, sales, price, salePrice, rate } = Astro.props
         <p id="sale-price">${salePrice}</p>
     </div>
 
-    <button id="learn">Learn More <img src="/src/svg/arrow-next.svg" alt=""></button>
+    <button id="btn-learn">Learn More <img src="/src/svg/arrow-next.svg" alt=""></button>
 </div>
 
 <style>
@@ -42,19 +44,25 @@ const { title, description, image, sales, price, salePrice, rate } = Astro.props
         flex-direction: column;
         justify-content: start;
         background-color: #fff;
-        margin: 1rem;
-        flex: 0 0 47%;
+        flex: 0 0 48%;
+        height: fit-content;
     }
+
+    #topCarp {
+        position: relative;
+        height: 50%;
+    }
+
+    #principalImage {
+        width: 100%;
+        height: 100%;
+    }
+
     #welcome {
         font-size: 0.9rem;
         color: #8D5CF6;
         text-align: start;
         margin: 1rem 1rem;
-    }
-
-    #principalImage {
-        width: 100%;
-        height: 50%;
     }
 
     #topInfoCard {
@@ -63,25 +71,29 @@ const { title, description, image, sales, price, salePrice, rate } = Astro.props
         justify-content: space-between;
         align-items: start;
     }
-    
+
     #description {
         font-size: 14px;
         margin: 1rem 1rem;
     }
 
-    #learn {
+    #btn-learn {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        gap: 0.5rem;
         background-color: transparent;
         color: #8D5CF6;
         font-size: 1rem;
         font-weight: 700;
         border: 1px solid #8D5CF6;
         border-radius: 20px;
-        padding: 0.5rem 1rem;
-        margin: 1rem 1rem;
+        padding: 1rem;
+        margin: 2rem 1rem;
         cursor: pointer;
         width: 40%;
     }
-    
+
     h5 {
         font-weight: 700;
         margin: 0 1rem;
@@ -92,7 +104,6 @@ const { title, description, image, sales, price, salePrice, rate } = Astro.props
         color: #737373;
         margin: 1rem 1rem;
     }
-
 
     .price {
         display: flex;
@@ -135,8 +146,6 @@ const { title, description, image, sales, price, salePrice, rate } = Astro.props
         padding: 0.2rem 0.5rem;
     }
 
-
-
     .badge {
         position: absolute;
         top: 2%;
@@ -155,8 +164,9 @@ const { title, description, image, sales, price, salePrice, rate } = Astro.props
         display: flex;
         flex-direction: row;
         position: absolute;
-        top: 40%;
-        left: 30%;
+        top: 80%;
+        left: 50%;
+        transform: translateX(-50%);
         gap: 1rem;
         z-index: 2;
 
