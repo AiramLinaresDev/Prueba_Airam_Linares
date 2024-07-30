@@ -62,6 +62,25 @@
             color: #737373;
             margin-bottom: 0.5rem;
             text-decoration: none;
+            width: fit-content;
+        }
+
+        a::after {
+            content: "";
+            display: block;
+            width: 0;
+            height: 2px;
+            background: #8D5CF6;
+            transition: width .3s;
+        }
+
+        a:hover {
+            color: #8D5CF6;
+        }
+
+        a:hover::after {
+            width: 100%;
+            transition: width .3s;
         }
     }
 

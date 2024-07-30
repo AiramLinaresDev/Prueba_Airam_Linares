@@ -52,6 +52,7 @@ const { href, title, body } = Astro.props;
 	img {
 		margin-right: 1rem;
 		margin-left: -1.7rem;
+		transition: transform 0.3s ease-in-out;
 	}
 	.link-card:is(:hover, :focus-within) {
 		background-position: 0;
@@ -59,5 +60,8 @@ const { href, title, body } = Astro.props;
 	}
 	.link-card:is(:hover, :focus-within) h2 {
 		color: rgb(var(--accent-dark));
+	}
+	.link-card:is(:hover, :focus-within) img {
+		transform: rotate(90deg);
 	}
 </style>
