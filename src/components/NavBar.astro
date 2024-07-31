@@ -17,64 +17,61 @@
 </nav>
 
 <style>
-.nav {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 20px;
-    @media screen and (max-width: 888px) {
-        flex-direction: column;
-        gap: 20px;
+    .nav {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
     }
-}
 
-.logo {
-    font-size: 24px;
-    font-weight: bold;
-    color: white;
-    margin-left: 10%;
-    transition: font-size 0.5s ease-in-out;
-}
-
-.logo:hover {
-    cursor: pointer;
-    font-size: 30px;
-}
-
-.nav-links {
-    display: flex;
-    margin-left: 8%;
-    margin-right: auto;
-    gap: 20px;
-
-    a {
+    .logo {
+        font-size: 24px;
+        font-weight: bold;
         color: white;
-        text-decoration: none;
-        font-size: 16px;
-        position: relative;
+        margin-left: 10%;
+        transition: font-size 0.5s ease-in-out;
     }
 
-    a::after {
-        content: '';
-        position: absolute;
-        width: 0;
-        height: 2px;
-        bottom: 0;
-        left: 0;
-        background-color: white;
-        transition: width 0.5s ease-in-out;
+    .logo:hover {
+        cursor: pointer;
+        font-size: 30px;
     }
 
-    a:hover::after {
-        width: 100%;
+    .nav-links {
+        display: flex;
+        margin-left: 8%;
+        margin-right: auto;
+        gap: 20px;
+
+        a {
+            color: white;
+            text-decoration: none;
+            font-size: 16px;
+            position: relative;
+        }
+
+        a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: 0;
+            left: 0;
+            background-color: white;
+            transition: width 0.5s ease-in-out;
+        }
+
+        a:hover::after {
+            width: 100%;
+        }
     }
-}
 
-.auth-links {
-    display: flex;
-    align-items: center;
-    gap: 30px;
+    .auth-links {
+        display: flex;
+        align-items: center;
+        gap: 30px;
 
+    }
     .login {
         color: white;
         background-color: transparent;
@@ -107,5 +104,4 @@
         cursor: pointer;
         background-color: transparent;
     }
-}
 </style>

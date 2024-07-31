@@ -7,9 +7,13 @@ interface Props {
     price: number;
     salePrice: number;
     rate: number;
+    timeToComplete?: string;
+    lessons?: string;
+    type?: string;
 }
 
-const { title, description, image, sales, price, salePrice, rate } = Astro.props;
+const { title, description, image, sales, price, salePrice, rate, timeToComplete, lessons, type } = Astro.props;
+const shouldRenderDiv = timeToComplete || lessons || type;
 ---
 
 <div class="approdable-card">
@@ -33,7 +37,19 @@ const { title, description, image, sales, price, salePrice, rate } = Astro.props
         <p id="price">${price}</p>
         <p id="sale-price">${salePrice}</p>
     </div>
-
+    {shouldRenderDiv && (
+        <div id="timeToComplete">
+            {timeToComplete && (
+                <h5><img src="/src/svg/Clock.svg" alt=""/>{timeToComplete}</h5>
+            )}
+            {lessons && (
+                <h5><img src="/src/svg/Lessons.svg" alt=""/>{lessons}</h5>
+            )}
+            {type && (
+                <h5><img src="/src/svg/Progress.svg" alt=""/>{type}</h5>
+            )}
+            </div>
+        )}
     <button id="btn-learn">Learn More <img src="/src/svg/arrow-next.svg" alt=""></button>
 </div>
 
@@ -88,8 +104,8 @@ const { title, description, image, sales, price, salePrice, rate } = Astro.props
         font-weight: 700;
         border: 1px solid #8D5CF6;
         border-radius: 20px;
-        padding: 1rem;
-        margin: 2rem 1rem;
+        padding: 0.7rem;
+        margin: 1rem 1rem;
         cursor: pointer;
         width: 40%;
 
@@ -100,6 +116,36 @@ const { title, description, image, sales, price, salePrice, rate } = Astro.props
 
     #btn-learn:hover img {
         transform: translateX(5px);
+    }
+    
+    #timeToComplete {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        margin: 1.1rem 0 0.4rem 0;
+        
+        h5 {
+            display: flex;
+            flex-direction: row;
+            gap: 0.5rem;
+            font-size: 0.9rem;
+            color: #737373;
+            font-weight: 600;
+        }
+    }
+
+    #sale-price {
+        font-size: 1rem;
+        font-weight: 700;
+        color: #FF7B52;
+        margin-left: 0;
+    }
+
+    #price {
+        font-size: 1rem;
+        font-weight: 700;
+        color: #BDBDBD;
     }
 
     h5 {
@@ -119,18 +165,6 @@ const { title, description, image, sales, price, salePrice, rate } = Astro.props
         align-items: start;
         margin-bottom: -5%;
 
-        #sale-price {
-            font-size: 1rem;
-            font-weight: 700;
-            color: #FF7B52;
-            margin-left: 0;
-        }
-
-        #price {
-            font-size: 1rem;
-            font-weight: 700;
-            color: #BDBDBD;
-        }
     }
 
     .sales {
@@ -178,25 +212,25 @@ const { title, description, image, sales, price, salePrice, rate } = Astro.props
         gap: 1rem;
         z-index: 2;
 
-        .round {
-            width: 2rem;
-            height: 2rem;
-            background-color: #fff;
-            border: none;
-            border-radius: 50%;
-            cursor: pointer;
-            
-            img {
-                margin-bottom: -2px;
-                width: 1rem;
-                height: 1rem;
-            }
-
+    }
+    .round {
+        width: 2rem;
+        height: 2rem;
+        background-color: #fff;
+        border: none;
+        border-radius: 50%;
+        cursor: pointer;
+        
+        img {
+            margin-bottom: -2px;
+            width: 1rem;
+            height: 1rem;
         }
 
-        .round:hover {
-            transform: scale(1.1);
-        }
+    }
+
+    .round:hover {
+        transform: scale(1.1);
     }
 </style>
 
