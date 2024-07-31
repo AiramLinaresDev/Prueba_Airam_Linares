@@ -12,11 +12,9 @@ Este proyecto consiste en una página estática basada en el diseño proporciona
 - **Lenguajes:** HTML, CSS, JavaScript
 - **Diseño:** Proporcionado por Figma
 
-## 🧞 Commands
+## 🧞 Comandos
 
-All commands are run from the root of the project, from a terminal:
-
-| Command                          | Action                                           |
+| Comando                          | Acción                                           |
 | :------------------------------- | :----------------------------------------------- |
 | `git clone [URL del repositorio]`| Clona el proyecto de github                      |
 | `npm install`                    | Instala todas las dependecias                    |
