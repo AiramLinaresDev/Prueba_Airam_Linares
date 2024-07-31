@@ -31,6 +31,7 @@ All commands are run from the root of the project, from a terminal:
 He creado varios componentes con propiedades para que sean lo mas personalizables posible.
 
 ```Astro
+<!-- Las propiedades timeToComplete, lessons y type son opcionales -->
 <ApprodableCard
     title="Training Courses"
     description="We focus on ergonomics and meeting you where you work. It's only a keystroke away."
