@@ -22,7 +22,7 @@ All commands are run from the root of the project, from a terminal:
 
 | Command                          | Action                                           |
 | :------------------------------- | :----------------------------------------------- |
-| `git clone [URL del repositorio]`| Clona el proyecto de github`                     |
+| `git clone [URL del repositorio]`| Clona el proyecto de github                      |
 | `npm install`                    | Instala todas las dependecias                    |
 | `npm run dev`                    | Starts local dev server at `localhost:4321`      |
 
