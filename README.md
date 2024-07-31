@@ -12,10 +12,6 @@ Este proyecto consiste en una página estática basada en el diseño proporciona
 - **Lenguajes:** HTML, CSS, JavaScript
 - **Diseño:** Proporcionado por Figma
 
-## Estructura del Proyecto
-
-La estructura del proyecto es la siguiente:
-
 ## 🧞 Commands
 
 All commands are run from the root of the project, from a terminal:
