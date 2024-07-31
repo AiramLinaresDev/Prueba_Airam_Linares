@@ -64,3 +64,7 @@ He creado varios componentes con propiedades para que sean lo mas personalizable
     PosterJob="Designer"
 />
 ```
+
+## Authors
+
+- [@AiramLinaresDev](https://github.com/AiramLinaresDev)
